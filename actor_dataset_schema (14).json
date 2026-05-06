@@ -1,0 +1,63 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "question": {
+            "type": "string",
+            "description": "The question or topic"
+        },
+        "answer": {
+            "type": "string",
+            "description": "The answer or response"
+        },
+        "source": {
+            "type": "string",
+            "enum": ["Reddit", "Quora"],
+            "description": "Platform source"
+        },
+        "url": {
+            "type": "string",
+            "description": "Link to original post"
+        },
+        "votes": {
+            "type": "integer",
+            "description": "Upvotes/Score"
+        },
+        "timestamp": {
+            "type": "string",
+            "description": "When posted (ISO 8601)"
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Q&A Pairs Overview",
+            "transformation": {
+                "fields": ["question", "answer", "source", "votes", "url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "question": {
+                        "label": "Question",
+                        "format": "text"
+                    },
+                    "answer": {
+                        "label": "Answer",
+                        "format": "text"
+                    },
+                    "source": {
+                        "label": "Source",
+                        "format": "text"
+                    },
+                    "votes": {
+                        "label": "Votes",
+                        "format": "number"
+                    },
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}

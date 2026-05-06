@@ -1,0 +1,21 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output of Synthetic Dataset Generator",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Q&A Pairs Dataset",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "itemCount": {
+            "type": "number",
+            "title": "Total Q&A Pairs Generated",
+            "template": "{{run.usageInfo.items}}"
+        },
+        "crawledUrls": {
+            "type": "number",
+            "title": "URLs Crawled",
+            "template": "{{run.usageInfo.requests}}"
+        }
+    }
+}
